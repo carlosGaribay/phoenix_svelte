@@ -18,7 +18,15 @@ import "phoenix_html"
 
 import App from './App.svelte';
 
-const app = new App({
+let target = document.querySelector("#app");
+new App({ 
+  target, 
+  props: { 
+    name: "Svelte" 
+  } 
+});
+
+/*const app = new App({
   target: document.body,
   props: {
     name: 'Svelte + Elixir'
@@ -27,4 +35,4 @@ const app = new App({
 
 window.app = app;
 
-export default app;
+export default app;*/
